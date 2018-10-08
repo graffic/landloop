@@ -2,12 +2,16 @@
 
 ## First exercise:
 Prerequisites:
-Use Jackson library for string/bytes to Json deserialization Scala 2.11/2.12
+* Use Jackson library for string/bytes to Json deserialization
+* Scala 2.11/2.12 (Java is used in this implementation
+
 Write a method "jsonToMap" which converts any json input to a scala Map while retaining the structure.
 Therefore on a nested json it will end up with a Map-of-Maps.
+```scala
 def jsonToMap(json:InputStream):Map[String, Any]
+```
 
-## Exercise 2:
+## Second Exercise:
 Create a REST application with a single endpoint: `POST /api/convert` Body:
 ```json
 {
@@ -21,7 +25,9 @@ The return should be an object with the exchange rate between the "fromCurrency"
 
 ```json
 {
-"exchange" : 1.11, "amount" : 113.886, "original" : 102.6
+  "exchange" : 1.11,
+  "amount" : 113.886,
+  "original" : 102.6
 }
 ```
 
